@@ -14,6 +14,8 @@
 		70A76B821F8E5F740015F1AA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70A76B801F8E5F740015F1AA /* LaunchScreen.storyboard */; };
 		70A76B851F8E5F740015F1AA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A76B841F8E5F740015F1AA /* main.m */; };
 		70A76B8D1F8E64870015F1AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A76B8C1F8E64870015F1AA /* MobileCoreServices.framework */; };
+		70A76B901F8FAFAC0015F1AA /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */; };
+		70A76B931F8FB2B00015F1AA /* CaptureSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,10 @@
 		70A76B831F8E5F740015F1AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		70A76B841F8E5F740015F1AA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		70A76B8C1F8E64870015F1AA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		70A76B8E1F8FAFAC0015F1AA /* ImagePickerController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ImagePickerController.h; sourceTree = "<group>"; };
+		70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerController.m; sourceTree = "<group>"; };
+		70A76B911F8FB2B00015F1AA /* CaptureSessionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureSessionViewController.h; sourceTree = "<group>"; };
+		70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +77,10 @@
 				70A76B801F8E5F740015F1AA /* LaunchScreen.storyboard */,
 				70A76B831F8E5F740015F1AA /* Info.plist */,
 				70A76B841F8E5F740015F1AA /* main.m */,
+				70A76B8E1F8FAFAC0015F1AA /* ImagePickerController.h */,
+				70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */,
+				70A76B911F8FB2B00015F1AA /* CaptureSessionViewController.h */,
+				70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */,
 			);
 			path = MovieStudyDemo;
 			sourceTree = "<group>";
@@ -156,7 +166,9 @@
 			files = (
 				70A76B7A1F8E5F740015F1AA /* ViewController.m in Sources */,
 				70A76B851F8E5F740015F1AA /* main.m in Sources */,
+				70A76B931F8FB2B00015F1AA /* CaptureSessionViewController.m in Sources */,
 				70A76B771F8E5F740015F1AA /* AppDelegate.m in Sources */,
+				70A76B901F8FAFAC0015F1AA /* ImagePickerController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -290,12 +302,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QVJTFD4ZG;
 				INFOPLIST_FILE = MovieStudyDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yangka.MovieStudyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -304,12 +318,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 4QVJTFD4ZG;
 				INFOPLIST_FILE = MovieStudyDemo/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yangka.MovieStudyDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
