@@ -68,6 +68,7 @@
 		70A76B741F8E5F740015F1AA /* MovieStudyDemo */ = {
 			isa = PBXGroup;
 			children = (
+				8FCAF6721F907DB800FD3956 /* Movie capture */,
 				70A76B751F8E5F740015F1AA /* AppDelegate.h */,
 				70A76B761F8E5F740015F1AA /* AppDelegate.m */,
 				70A76B781F8E5F740015F1AA /* ViewController.h */,
@@ -77,10 +78,6 @@
 				70A76B801F8E5F740015F1AA /* LaunchScreen.storyboard */,
 				70A76B831F8E5F740015F1AA /* Info.plist */,
 				70A76B841F8E5F740015F1AA /* main.m */,
-				70A76B8E1F8FAFAC0015F1AA /* ImagePickerController.h */,
-				70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */,
-				70A76B911F8FB2B00015F1AA /* CaptureSessionViewController.h */,
-				70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */,
 			);
 			path = MovieStudyDemo;
 			sourceTree = "<group>";
@@ -91,6 +88,17 @@
 				70A76B8C1F8E64870015F1AA /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		8FCAF6721F907DB800FD3956 /* Movie capture */ = {
+			isa = PBXGroup;
+			children = (
+				70A76B8E1F8FAFAC0015F1AA /* ImagePickerController.h */,
+				70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */,
+				70A76B911F8FB2B00015F1AA /* CaptureSessionViewController.h */,
+				70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */,
+			);
+			path = "Movie capture";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
