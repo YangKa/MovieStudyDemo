@@ -39,14 +39,17 @@
         picker = [[UIImagePickerController alloc] init];
         
         picker.sourceType = UIImagePickerControllerSourceTypeCamera;//相机
-        picker.mediaTypes = @[(NSString*)kUTTypeImage, (NSString*)kUTTypeLivePhoto];
-        //picker.mediaTypes = @[(NSString*)kUTTypeMovie];//默认只有拍照界面kUTTypeImage
+        picker.mediaTypes = @[(NSString*)kUTTypeMovie];//默认只有拍照界面kUTTypeImage
         //        if ([UIImagePickerController isCameraDeviceAvailable:UIImagePickerControllerCameraDeviceFront]){
         //            picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;//前后摄像头
         //        }
         
         picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
         
+        //实时改变获取的内容
+       // picker.cameraViewTransform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI_2);
+        
+        //picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
         
         //自定义overlay
        // [self addCameraOverlayView];
