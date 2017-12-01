@@ -14,6 +14,8 @@
 @interface CaptureSessionViewController ()<AVCaptureFileOutputRecordingDelegate>{
     AVCaptureSession *_captureSession;
     
+    AVCaptureMovieFileOutput *_fileOutput;
+    
 }
 
 @end
@@ -40,7 +42,8 @@
     AVCaptureDeviceInput *audioInput = [[AVCaptureDeviceInput alloc] initWithDevice:audioDevice error:nil];
     
     //file output
-    AVCaptureMovieFileOutput *fileOutput = [[AVCaptureMovieFileOutput alloc] init];
+    _fileOutput = [[AVCaptureMovieFileOutput alloc] init];
+    _fileOutput.de
     
     if ([_captureSession canAddInput:videoInput]) {
         [_captureSession addInput:videoInput];
@@ -48,8 +51,8 @@
     if ([_captureSession canAddInput:audioInput]) {
         [_captureSession addInput:audioInput];
     }
-    if ([_captureSession canAddOutput:fileOutput]) {
-        [_captureSession addOutput:fileOutput];
+    if ([_captureSession canAddOutput:_fileOutput]) {
+        [_captureSession addOutput:_fileOutput];
     }
     
     //设置帧速率
@@ -82,13 +85,48 @@
     
     //视频 HDR (高动态范围图像)
     videoDevice.automaticallyAdjustsVideoHDREnabled = YES;
-    
-    //开始录制
-    //    [fileOutput startRecordingToOutputFileURL:nil recordingDelegate:self];
-    //    [fileOutput stopRecording];
-    //    [fileOutput pauseRecording];
-    //    [fileOutput resumeRecording];
 }
 
+- (void)addPreviewLayer{
+    
+}
+
+- (void)startRecording{
+    //开始录制
+    if (_fileOutput.isRecording) {
+        [_fileOutput resumeRecording];
+    }else{
+       [_fileOutput startRecordingToOutputFileURL:nil recordingDelegate:self];
+    }
+    
+}
+
+- (void)stopRecording{
+    [_fileOutput stopRecording];
+}
+
+- (void)pauseRecording{
+    [_fileOutput pauseRecording];
+}
+
+- (void)captureOutput:(AVCaptureFileOutput *)output didStartRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray<AVCaptureConnection *> *)connections{
+    
+}
+
+- (void)captureOutput:(AVCaptureFileOutput *)output didPauseRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray<AVCaptureConnection *> *)connections{
+    
+}
+
+- (void)captureOutput:(AVCaptureFileOutput *)output didResumeRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray<AVCaptureConnection *> *)connections{
+    
+}
+
+- (void)captureOutput:(AVCaptureFileOutput *)output willFinishRecordingToOutputFileAtURL:(NSURL *)fileURL fromConnections:(NSArray<AVCaptureConnection *> *)connections error:(nullable NSError *)error{
+    
+}
+
+- (void)captureOutput:(AVCaptureFileOutput *)output didFinishRecordingToOutputFileAtURL:(NSURL *)outputFileURL fromConnections:(NSArray<AVCaptureConnection *> *)connections error:(NSError *)error{
+    
+}
 
 @end

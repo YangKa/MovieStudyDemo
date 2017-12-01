@@ -16,6 +16,7 @@
 		70A76B8D1F8E64870015F1AA /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A76B8C1F8E64870015F1AA /* MobileCoreServices.framework */; };
 		70A76B901F8FAFAC0015F1AA /* ImagePickerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */; };
 		70A76B931F8FB2B00015F1AA /* CaptureSessionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */; };
+		70A76B951F917F9E0015F1AA /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70A76B941F917F9E0015F1AA /* AVFoundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		70A76B8F1F8FAFAC0015F1AA /* ImagePickerController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImagePickerController.m; sourceTree = "<group>"; };
 		70A76B911F8FB2B00015F1AA /* CaptureSessionViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CaptureSessionViewController.h; sourceTree = "<group>"; };
 		70A76B921F8FB2B00015F1AA /* CaptureSessionViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CaptureSessionViewController.m; sourceTree = "<group>"; };
+		70A76B941F917F9E0015F1AA /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				70A76B951F917F9E0015F1AA /* AVFoundation.framework in Frameworks */,
 				70A76B8D1F8E64870015F1AA /* MobileCoreServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -85,6 +88,7 @@
 		70A76B8B1F8E64870015F1AA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				70A76B941F917F9E0015F1AA /* AVFoundation.framework */,
 				70A76B8C1F8E64870015F1AA /* MobileCoreServices.framework */,
 			);
 			name = Frameworks;
