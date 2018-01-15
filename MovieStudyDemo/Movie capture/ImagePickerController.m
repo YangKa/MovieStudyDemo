@@ -52,7 +52,7 @@
         //picker.cameraCaptureMode = UIImagePickerControllerCameraCaptureModeVideo;
         
         //自定义overlay
-       // [self addCameraOverlayView];
+        [self addCameraOverlayView];
         
         
         picker.delegate = self;
